@@ -36,4 +36,15 @@ cd EmployeeAttendance
 pip install -r requirements.txt
 
 # Make sure your DB is running and schema is created
-python app.py
+export FLASK_APP=app.py
+
+flask run --port=5001
+```
+## 🖼️ Screenshot
+
+> Below is a preview of the frontend:
+
+![App Screenshot](screenshot1.png)
+![App Screenshot](screenshot2.png)
+![App Screenshot](screenshot3.png)
+![App Screenshot](screenshot4.png)
