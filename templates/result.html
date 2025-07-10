@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>📋 Processed Attendance Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Emp ID</th>
+                    <th>Name</th>
+                    <th>First Check-In</th>
+                    <th>Last Check-Out</th>
+                    <th>Out Count</th>
+                    <th>Total Work Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row.EmpID }}</td>
+                    <td>{{ row.Name }}</td>
+                    <td>{{ row.FirstCheckIn }}</td>
+                    <td>{{ row.LastCheckOut }}</td>
+                    <td>{{ row.OutCount }}</td>
+                    <td>{{ row.TotalWorkHours }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="back-link">⬅ Upload Another File</a>
+    </div>
+</body>
+</html>
